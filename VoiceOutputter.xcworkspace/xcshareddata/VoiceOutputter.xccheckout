@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F8DA2627-3482-460B-8986-05D7520F624E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VoiceOutputter</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DC145A83B61CBA584EF4E2F090719A1E1DB9321D</key>
+		<string>https://github.com/syunnichi/voiceOutputter.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>VoiceOutputter.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DC145A83B61CBA584EF4E2F090719A1E1DB9321D</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/syunnichi/voiceOutputter.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DC145A83B61CBA584EF4E2F090719A1E1DB9321D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DC145A83B61CBA584EF4E2F090719A1E1DB9321D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>voiceOutputter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
