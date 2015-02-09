@@ -87,7 +87,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0.5"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="　　　　　　　　　　　　　　音読する文章を表示します。" translatesAutoresizingMaskIntoConstraints="NO" id="HPC-Wk-8ka">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="　　　　　　　　　　　　　　音読する文章を表示します。" translatesAutoresizingMaskIntoConstraints="NO" id="HPC-Wk-8ka">
                                 <rect key="frame" x="92" y="620" width="584" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
