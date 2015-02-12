@@ -11,11 +11,11 @@ import UIKit
 class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     @IBOutlet var displayTakenImageView: UIImageView!
-    @IBOutlet weak var takeImageButton: UIBarButtonItem!
     @IBOutlet weak var displayConvertedSentenceView: UITextView!
     @IBOutlet weak var displayVoiceOutputSentenceView: UITextView!
     @IBOutlet weak var controlVoiceSpeedSlider: UISlider!
     @IBOutlet weak var stopVoiceOutputButton: UIButton!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
 
     var numberOfSentence:NSInteger = 0
     var indexOfSentence:NSInteger = 0
@@ -77,22 +77,20 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         stopVoiceOutputButton.setImage(UIImage(named:voiceOutput.getStopVoiceOutputButtonImageName()), forState: .Normal)
         voiceOutput.stopReadingSentence()
     }
+    
+    
 
     //MARK:UIImagePickerViewDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         self.displayTakenImageView.image = info[UIImagePickerControllerEditedImage] as? UIImage
         self.dismissViewControllerAnimated(true, completion: nil)
-        var spinner:UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
-        spinner.center = CGPointMake(self.view.frame.width/2, self.view.frame.height/2+75)
-        spinner.hidesWhenStopped = true
-        self.view.addSubview(spinner)
         spinner.startAnimating()
         dispatch_async(dispatch_get_main_queue(), {
             var tesseractOCR:tesseractOCRiOS = tesseractOCRiOS()
             self.displayConvertedSentenceView.text = tesseractOCR.getConvertStringWithImage(self.displayTakenImageView.image)
             self.displayVoiceOutputSentenceView.text = self.textModel.getStringOfIndex(self.indexOfSentence, sentences: self.displayConvertedSentenceView.text)
             self.numberOfSentence = self.textModel.countNumberOfSentence(self.displayConvertedSentenceView.text)
-            spinner.stopAnimating()
+            self.spinner.stopAnimating()
             })
     }
     
