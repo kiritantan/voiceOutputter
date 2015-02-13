@@ -27,6 +27,11 @@
                                 <state key="normal" title="next" image="next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapSNextSentenceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ujs-6v-fUE"/>
                                 </connections>
@@ -102,19 +107,6 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="0.5"/>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARg-0Q-VYK">
-                                <rect key="frame" x="54" y="710" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Zm9-hH-cBL"/>
-                                    <constraint firstAttribute="height" constant="100" id="vU9-r9-oRn"/>
-                                </constraints>
-                                <state key="normal" title="return" image="return">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapReturnSentenceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q0P-pB-tLt"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymi-9B-SE2">
                                 <rect key="frame" x="246" y="710" width="100" height="100"/>
                                 <constraints>
@@ -124,6 +116,11 @@
                                 <state key="normal" title="start" image="start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapStartVoiceOutputButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5bD-n0-pcH"/>
                                 </connections>
@@ -137,6 +134,11 @@
                                 <state key="normal" title="stop" image="stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapStopVoiceOutputButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kfo-Fl-W89"/>
                                 </connections>
@@ -190,6 +192,24 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARg-0Q-VYK">
+                                <rect key="frame" x="54" y="710" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Zm9-hH-cBL"/>
+                                    <constraint firstAttribute="height" constant="100" id="vU9-r9-oRn"/>
+                                </constraints>
+                                <state key="normal" title="return" image="return">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapReturnSentenceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q0P-pB-tLt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
