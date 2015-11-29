@@ -36,7 +36,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         if (!(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera))) {
             return
         }
-        var imagePicker:UIImagePickerController = UIImagePickerController()
+        let imagePicker:UIImagePickerController = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
@@ -81,17 +81,17 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     
 
     //MARK:UIImagePickerViewDelegate
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         self.displayTakenImageView.image = info[UIImagePickerControllerEditedImage] as? UIImage
         self.dismissViewControllerAnimated(true, completion: nil)
         spinner.startAnimating()
         dispatch_async(dispatch_get_main_queue(), {
-            var tesseractOCR:tesseractOCRiOS = tesseractOCRiOS()
+            let tesseractOCR:tesseractOCRiOS = tesseractOCRiOS()
             self.displayConvertedSentenceView.text = tesseractOCR.getConvertStringWithImage(self.displayTakenImageView.image)
             self.displayVoiceOutputSentenceView.text = self.textModel.getStringOfIndex(self.indexOfSentence, sentences: self.displayConvertedSentenceView.text)
             self.numberOfSentence = self.textModel.countNumberOfSentence(self.displayConvertedSentenceView.text)
             self.spinner.stopAnimating()
-            })
+        })
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {

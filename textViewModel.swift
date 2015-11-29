@@ -15,7 +15,8 @@ class textViewModel: NSObject {
             return 0
         } else {
             var count:Int = 1
-            for char in sentences {
+            let chars = sentences.characters.map { String($0) }
+            for char in chars {
                 count += (char == "。") ? 1 : 0
             }
             return count
@@ -28,7 +29,8 @@ class textViewModel: NSObject {
         } else {
             var count = 0
             var composition = String()
-            for char in sentences {
+            let chars = sentences.characters.map { String($0) }
+            for char in chars {
                 if (char != "。") {
                     composition += String(char)
                 } else {

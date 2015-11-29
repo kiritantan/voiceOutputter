@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -24,7 +25,8 @@
                                     <constraint firstAttribute="height" constant="100" id="2X8-fQ-x5P"/>
                                     <constraint firstAttribute="width" constant="100" id="cqs-Ix-SZa"/>
                                 </constraints>
-                                <state key="normal" title="next" image="next">
+                                <state key="normal" title="next">
+                                    <color key="titleColor" red="0.59308012200000004" green="0.80983922100000005" blue="0.69002118570000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -73,10 +75,10 @@
                                     <action selector="didTapUpVoiceSpeedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oL-wM-pc1"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="Cal-cT-OBa">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cal-cT-OBa">
                                 <rect key="frame" x="234" y="30" width="300" height="400"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Cal-cT-OBa" secondAttribute="height" multiplier="3:4" id="pS5-zI-kVy"/>
@@ -113,7 +115,8 @@
                                     <constraint firstAttribute="width" constant="100" id="Yf1-Sf-aMG"/>
                                     <constraint firstAttribute="height" constant="100" id="wCD-b2-YqJ"/>
                                 </constraints>
-                                <state key="normal" title="start" image="start">
+                                <state key="normal" title="start">
+                                    <color key="titleColor" red="0.59308012200000004" green="0.80983922100000005" blue="0.69002118570000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -131,7 +134,8 @@
                                     <constraint firstAttribute="height" constant="100" id="Pmr-W5-EJ3"/>
                                     <constraint firstAttribute="width" constant="100" id="TDB-6L-7Vc"/>
                                 </constraints>
-                                <state key="normal" title="stop" image="stop">
+                                <state key="normal" title="stop">
+                                    <color key="titleColor" red="0.59308012200000004" green="0.80983922100000005" blue="0.69002118570000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -163,18 +167,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2c-X9-J98">
-                                <rect key="frame" x="234" y="30" width="300" height="400"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="h2c-X9-J98" secondAttribute="height" multiplier="3:4" id="3ew-dR-Kfr"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapTakeImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iNg-nR-RLX"/>
-                                </connections>
-                            </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="4bT-MW-3Fy">
                                 <rect key="frame" x="374" y="530" width="20" height="20"/>
                             </activityIndicatorView>
@@ -198,7 +190,8 @@
                                     <constraint firstAttribute="width" constant="100" id="Zm9-hH-cBL"/>
                                     <constraint firstAttribute="height" constant="100" id="vU9-r9-oRn"/>
                                 </constraints>
-                                <state key="normal" title="return" image="return">
+                                <state key="normal" title="return">
+                                    <color key="titleColor" red="0.59308012200000004" green="0.80983922100000005" blue="0.69002118570000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -208,6 +201,18 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapReturnSentenceButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q0P-pB-tLt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2c-X9-J98">
+                                <rect key="frame" x="234" y="30" width="300" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="h2c-X9-J98" secondAttribute="height" multiplier="3:4" id="3ew-dR-Kfr"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapTakeImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iNg-nR-RLX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -278,16 +283,4 @@
             <point key="canvasLocation" x="367" y="488"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="next" width="100" height="100"/>
-        <image name="noImage" width="600" height="800"/>
-        <image name="return" width="100" height="100"/>
-        <image name="start" width="100" height="100"/>
-        <image name="stop" width="100" height="100"/>
-    </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
-    </simulatedMetricsContainer>
 </document>
