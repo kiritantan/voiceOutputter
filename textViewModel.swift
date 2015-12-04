@@ -9,6 +9,7 @@
 import UIKit
 
 class textViewModel: NSObject {
+    let ud = NSUserDefaults.standardUserDefaults()
     
     func countNumberOfSentence(sentences:String)->Int {
         if (sentences.isEmpty) {
@@ -17,7 +18,12 @@ class textViewModel: NSObject {
             var count:Int = 1
             let chars = sentences.characters.map { String($0) }
             for char in chars {
-                count += (char == "。") ? 1 : 0
+                if ud.integerForKey("language") == 0 {
+                    count += (char == "。") ? 1 : 0
+                } else {
+                    count += (char == ".") ? 1 : 0
+                }
+                
             }
             return count
         }
@@ -31,14 +37,27 @@ class textViewModel: NSObject {
             var composition = String()
             let chars = sentences.characters.map { String($0) }
             for char in chars {
-                if (char != "。") {
-                    composition += String(char)
-                } else {
-                    if (count < index) {
-                        composition = String()
-                        count++
+                if ud.integerForKey("language") == 0 {
+                    if (char != "。") {
+                        composition += String(char)
                     } else {
-                        break
+                        if (count < index) {
+                            composition = String()
+                            count++
+                        } else {
+                            break
+                        }
+                    }
+                } else {
+                    if (char != ".") {
+                        composition += String(char)
+                    } else {
+                        if (count < index) {
+                            composition = String()
+                            count++
+                        } else {
+                            break
+                        }
                     }
                 }
             }

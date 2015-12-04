@@ -66,8 +66,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         self.presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    func didTapCameraRollButton(senderrrrrr: UIBarButtonItem) {
-        print("hoge")
+    func didTapCameraRollButton(sender: UIBarButtonItem) {
+        pickImageFromLibrary()
     }
     
     @IBAction func didTapStartVoiceOutputButton(sender: AnyObject) {
@@ -125,11 +125,23 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         }
     }
     
+    func pickImageFromLibrary() {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            let controller = UIImagePickerController()
+            controller.delegate = self
+            controller.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
+    }
     
-
     //MARK:UIImagePickerViewDelegate
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        self.displayTakenImageView.image = info[UIImagePickerControllerEditedImage] as? UIImage
+        if picker.sourceType == .PhotoLibrary {
+            self.displayTakenImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+            self.displayTakenImageView.contentMode = .ScaleAspectFit
+        } else {
+            self.displayTakenImageView.image = info[UIImagePickerControllerEditedImage] as? UIImage
+        }
         self.dismissViewControllerAnimated(true, completion: nil)
         spinner.startAnimating()
         isConverted = true
@@ -151,7 +163,6 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
 }
 
 
