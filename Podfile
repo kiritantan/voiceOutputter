@@ -1,1 +1,1 @@
-pod 'TesseractOCRiOS', '3.4.0'
+pod 'TesseractOCRiOS', '~> 4.0.0'

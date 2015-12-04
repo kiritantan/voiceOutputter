@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,G8TesseractDelegate {
     
     @IBOutlet var displayTakenImageView: UIImageView!
     @IBOutlet weak var displayConvertedSentenceView: UITextView!
@@ -111,14 +111,17 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             spinner.startAnimating()
             isConverted = true
             dispatch_async(dispatch_get_main_queue(), {
-                let tesseractOCR:tesseractOCRiOS = tesseractOCRiOS()
-                var language = "jpn"
+                var lang = "jpn"
                 if self.ud.integerForKey("language") == 1 {
-                    language = "eng"
+                    lang = "eng"
                 }
-                self.displayConvertedSentenceView.text = tesseractOCR.getConvertStringWithImage(self.displayTakenImageView.image, language: language)
-                self.displayVoiceOutputSentenceView.text = self.textModel.getStringOfIndex(self.indexOfSentence, sentences: self.displayConvertedSentenceView.text)
+                let tesseractOCR = G8Tesseract(language: lang)
+                tesseractOCR.delegate = self
+                tesseractOCR.image = self.displayTakenImageView.image
+                tesseractOCR.recognize()
+                self.displayConvertedSentenceView.text = tesseractOCR.recognizedText
                 self.numberOfSentence = self.textModel.countNumberOfSentence(self.displayConvertedSentenceView.text)
+                self.displayVoiceOutputSentenceView.text = self.textModel.getStringOfIndex(0, sentences: self.displayConvertedSentenceView.text)
                 self.spinner.stopAnimating()
                 self.isConverted = false
             })
@@ -146,17 +149,20 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         spinner.startAnimating()
         isConverted = true
         dispatch_async(dispatch_get_main_queue(), {
-            let tesseractOCR:tesseractOCRiOS = tesseractOCRiOS()
-            var language = "jpn"
+            var lang = "jpn"
             if self.ud.integerForKey("language") == 1 {
-                language = "eng"
+                lang = "eng"
             }
-            self.displayConvertedSentenceView.text = tesseractOCR.getConvertStringWithImage(self.displayTakenImageView.image, language: language)
-            self.displayVoiceOutputSentenceView.text = self.textModel.getStringOfIndex(self.indexOfSentence, sentences: self.displayConvertedSentenceView.text)
+            let tesseractOCR = G8Tesseract(language: lang)
+            tesseractOCR.delegate = self
+            tesseractOCR.image = self.displayTakenImageView.image
+            tesseractOCR.recognize()
+            self.displayConvertedSentenceView.text = tesseractOCR.recognizedText
             self.numberOfSentence = self.textModel.countNumberOfSentence(self.displayConvertedSentenceView.text)
-            self.isCaptured = true
+            self.displayVoiceOutputSentenceView.text = self.textModel.getStringOfIndex(0, sentences: self.displayConvertedSentenceView.text)
             self.spinner.stopAnimating()
             self.isConverted = false
+            self.isCaptured = true
         })
     }
     

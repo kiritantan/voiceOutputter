@@ -11,7 +11,6 @@
 		50AE90B51A7B4A6D002A9803 /* viewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AE90B41A7B4A6D002A9803 /* viewControllerModel.swift */; };
 		50AE90B71A7B4A7D002A9803 /* textViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AE90B61A7B4A7D002A9803 /* textViewModel.swift */; };
 		50AE90B91A7B4A93002A9803 /* voiceOutputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AE90B81A7B4A93002A9803 /* voiceOutputModel.swift */; };
-		50D583B71A841B2C00FF084C /* tesseractOCRiOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 50D583B61A841B2C00FF084C /* tesseractOCRiOS.m */; };
 		50D583B91A841E2600FF084C /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 50D583B81A841E2600FF084C /* tessdata */; };
 		6F2ABEC51A7B3BDF0097F537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2ABEC41A7B3BDF0097F537 /* AppDelegate.swift */; };
 		6F2ABEC71A7B3BDF0097F537 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2ABEC61A7B3BDF0097F537 /* ViewController.swift */; };
@@ -36,8 +35,6 @@
 		50AE90B61A7B4A7D002A9803 /* textViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = textViewModel.swift; path = ../textViewModel.swift; sourceTree = "<group>"; };
 		50AE90B81A7B4A93002A9803 /* voiceOutputModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = voiceOutputModel.swift; sourceTree = "<group>"; };
 		50D583B41A841B2C00FF084C /* VoiceOutputter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VoiceOutputter-Bridging-Header.h"; sourceTree = "<group>"; };
-		50D583B51A841B2C00FF084C /* tesseractOCRiOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tesseractOCRiOS.h; sourceTree = "<group>"; };
-		50D583B61A841B2C00FF084C /* tesseractOCRiOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tesseractOCRiOS.m; sourceTree = "<group>"; };
 		50D583B81A841E2600FF084C /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		58915E79564BA2CE1C560E56 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6F2ABEBF1A7B3BDF0097F537 /* VoiceOutputter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceOutputter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,8 +111,6 @@
 				6F2ABECB1A7B3BDF0097F537 /* Images.xcassets */,
 				6F2ABECD1A7B3BDF0097F537 /* LaunchScreen.xib */,
 				6F2ABEC21A7B3BDF0097F537 /* Supporting Files */,
-				50D583B51A841B2C00FF084C /* tesseractOCRiOS.h */,
-				50D583B61A841B2C00FF084C /* tesseractOCRiOS.m */,
 				50D583B41A841B2C00FF084C /* VoiceOutputter-Bridging-Header.h */,
 			);
 			path = VoiceOutputter;
@@ -309,7 +304,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F2ABEC71A7B3BDF0097F537 /* ViewController.swift in Sources */,
-				50D583B71A841B2C00FF084C /* tesseractOCRiOS.m in Sources */,
 				50AE90B51A7B4A6D002A9803 /* viewControllerModel.swift in Sources */,
 				6F2ABEC51A7B3BDF0097F537 /* AppDelegate.swift in Sources */,
 				50AE90B91A7B4A93002A9803 /* voiceOutputModel.swift in Sources */,
