@@ -12,12 +12,18 @@ import AVFoundation
 class voiceOutputModel: NSObject {
     var speaker:AVSpeechSynthesizer = AVSpeechSynthesizer()
     var utterance:AVSpeechUtterance = AVSpeechUtterance()
+    let ud = NSUserDefaults.standardUserDefaults()
 
     func readSentence(indexOfSentence:NSInteger,numberOfSentence:NSInteger,sentence:String,voiceSpeedRate:Float) -> NSInteger {
         if(!speaker.paused && !speaker.speaking){
             self.utterance = AVSpeechUtterance(string:sentence)
             self.utterance.rate = voiceSpeedRate
-            self.utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
+            if ud.integerForKey("language") == 0 {
+                self.utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
+            } else {
+                self.utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            }
+            
             self.speaker.speakUtterance(self.utterance)
             return (indexOfSentence < numberOfSentence) ? indexOfSentence+1 : 0
         }

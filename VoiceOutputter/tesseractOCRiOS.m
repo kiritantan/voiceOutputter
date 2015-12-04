@@ -11,11 +11,16 @@
 
 @implementation tesseractOCRiOS
 - (NSString *)getConvertStringWithImage:(id)selectedImage {
+    return [self getConvertStringWithImage:selectedImage language: @"jpn"];
+}
+
+- (NSString *)getConvertStringWithImage:(id)selectedImage language:(NSString *)language {
     __block NSString *convertString;
-    Tesseract* tesseract = [[Tesseract alloc] initWithLanguage:@"jpn"];
+    Tesseract* tesseract = [[Tesseract alloc] initWithLanguage:language];
     [tesseract setImage:(UIImage *)selectedImage];
     [tesseract recognize];
     convertString = [tesseract recognizedText];
     return convertString;
 }
+
 @end

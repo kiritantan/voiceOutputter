@@ -10,4 +10,5 @@
 
 @interface tesseractOCRiOS : NSObject
 - (NSString *)getConvertStringWithImage:(id)selectedImage;
+- (NSString *)getConvertStringWithImage:(id)selectedImage language:(NSString *)language;
 @end
