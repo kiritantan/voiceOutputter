@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="100" id="2X8-fQ-x5P"/>
                                     <constraint firstAttribute="width" constant="100" id="cqs-Ix-SZa"/>
                                 </constraints>
-                                <state key="normal" title="next">
+                                <state key="normal" title="next" image="next">
                                     <color key="titleColor" red="0.59308012200000004" green="0.80983922100000005" blue="0.69002118570000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -75,7 +75,7 @@
                                     <action selector="didTapUpVoiceSpeedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2oL-wM-pc1"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cal-cT-OBa">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="Cal-cT-OBa">
                                 <rect key="frame" x="234" y="30" width="300" height="400"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
@@ -115,7 +115,7 @@
                                     <constraint firstAttribute="width" constant="100" id="Yf1-Sf-aMG"/>
                                     <constraint firstAttribute="height" constant="100" id="wCD-b2-YqJ"/>
                                 </constraints>
-                                <state key="normal" title="start">
+                                <state key="normal" title="start" image="start">
                                     <color key="titleColor" red="0.59308012200000004" green="0.80983922100000005" blue="0.69002118570000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -134,7 +134,7 @@
                                     <constraint firstAttribute="height" constant="100" id="Pmr-W5-EJ3"/>
                                     <constraint firstAttribute="width" constant="100" id="TDB-6L-7Vc"/>
                                 </constraints>
-                                <state key="normal" title="stop">
+                                <state key="normal" title="stop" image="stop">
                                     <color key="titleColor" red="0.59308012200000004" green="0.80983922100000005" blue="0.69002118570000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -190,7 +190,7 @@
                                     <constraint firstAttribute="width" constant="100" id="Zm9-hH-cBL"/>
                                     <constraint firstAttribute="height" constant="100" id="vU9-r9-oRn"/>
                                 </constraints>
-                                <state key="normal" title="return">
+                                <state key="normal" title="return" image="return">
                                     <color key="titleColor" red="0.59308012200000004" green="0.80983922100000005" blue="0.69002118570000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -283,4 +283,11 @@
             <point key="canvasLocation" x="367" y="488"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="next" width="100" height="100"/>
+        <image name="noImage" width="600" height="800"/>
+        <image name="return" width="100" height="100"/>
+        <image name="start" width="100" height="100"/>
+        <image name="stop" width="100" height="100"/>
+    </resources>
 </document>

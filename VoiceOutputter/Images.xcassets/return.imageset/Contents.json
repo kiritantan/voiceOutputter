@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "e112-Back.101.png"
+      "filename" : "return.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

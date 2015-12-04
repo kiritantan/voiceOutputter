@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "initialImage.png"
+      "filename" : "noImage.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

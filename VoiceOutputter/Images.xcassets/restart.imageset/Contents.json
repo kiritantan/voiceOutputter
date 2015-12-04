@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "restart.png"
+      "filename" : "restart.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
